@@ -1,0 +1,20 @@
+{
+  "name": "layoff-pulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anonymous Layoff Pulse survey with a Vercel serverless API, MongoDB storage, and email notifications.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "mongodb": "^6.20.0",
+    "resend": "^6.0.2"
+  },
+  "devDependencies": {
+    "vercel": "^48.0.0"
+  }
+}

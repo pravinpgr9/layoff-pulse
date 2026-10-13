@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layoff Pulse — Anonymous Survey</title>
+<style>
+:root{--ink:#172033;--muted:#687386;--line:#e4e9f0;--blue:#375dfb;--pale:#f4f7ff;--green:#117c62}*{box-sizing:border-box}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}header{background:linear-gradient(120deg,#172554,#375dfb);color:white;padding:38px 20px 74px}.top{max-width:900px;margin:auto}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;opacity:.8}.hero{max-width:900px;margin:14px auto 0}.hero h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 14px;letter-spacing:-.04em}.hero p{max-width:650px;color:#e2e8ff;margin:0;font-size:17px}.pill{display:inline-block;margin-top:20px;background:#ffffff20;border:1px solid #ffffff40;border-radius:99px;padding:7px 12px;font-size:13px}.wrap{max-width:900px;margin:-42px auto 60px;padding:0 16px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 38px #1a2b5010;margin-bottom:16px}.intro{display:flex;gap:16px;align-items:flex-start}.icon{flex:none;width:44px;height:44px;border-radius:13px;background:var(--pale);display:grid;place-items:center;color:var(--blue);font-size:22px}.intro h2{margin:0 0 5px;font-size:20px}.intro p{margin:0;color:var(--muted);font-size:14px}.section-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:20px}.section-head h2{margin:0;font-size:20px}.num{font-size:12px;color:var(--blue);font-weight:800;background:var(--pale);padding:5px 9px;border-radius:8px}.field{margin:22px 0}.field:first-child{margin-top:0}.field label.q{display:block;font-weight:700;margin-bottom:10px}.hint{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:3px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.options.one{grid-template-columns:1fr}.opt{position:relative}.opt input{position:absolute;opacity:0;pointer-events:none}.opt span{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:11px;padding:12px 13px;min-height:47px;cursor:pointer;font-size:14px;transition:.15s}.opt span:before{content:'';width:16px;height:16px;flex:none;border:1.5px solid #aeb8c8;border-radius:50%;background:white}.opt input[type=checkbox]+span:before{border-radius:4px}.opt input:checked+span{border-color:var(--blue);background:#f4f6ff;color:#2345db}.opt input:checked+span:before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px white}.opt input:focus-visible+span{outline:3px solid #a5b4fc}.textinput,select,textarea{width:100%;padding:12px 13px;border:1px solid #d6deea;border-radius:10px;font:inherit;color:var(--ink);background:white}.textinput:focus,select:focus,textarea:focus{outline:3px solid #dbe4ff;border-color:var(--blue)}textarea{resize:vertical;min-height:105px}.small-note{font-size:13px;color:var(--muted)}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:11px;background:var(--blue);color:white;font:inherit;font-weight:750;padding:13px 20px;cursor:pointer}.btn:hover{filter:brightness(.95)}.btn.secondary{background:#eef1f7;color:#26334a}.privacy{font-size:12px;color:var(--muted);margin-top:14px}.result{display:none;border-color:#b7e3d4;background:#f1fbf7}.result h2{color:var(--green);margin-top:0}.result pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,monospace;background:white;border:1px solid #d9eee6;padding:14px;border-radius:10px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 16px 35px}.toast{position:fixed;z-index:1000;right:18px;top:18px;max-width:min(420px,calc(100vw - 36px));padding:14px 18px;border-radius:12px;background:#117c62;color:#fff;box-shadow:0 12px 35px #17203330;display:none;font-weight:650}.toast.error{background:#b42318}.toast.show{display:block;animation:toastIn .2s ease-out}.success-panel{display:none;text-align:center;padding:34px 20px}.success-panel .success-mark{font-size:48px;color:var(--green)}.success-panel h2{margin:8px 0}.success-panel p{color:var(--muted)}@keyframes toastIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}} @media(max-width:560px){.options{grid-template-columns:1fr}.card{border-radius:14px}.intro{gap:12px}header{padding-bottom:66px}}
+</style></head>
+<body>
+<header><div class="top"><div class="eyebrow">Independent community survey</div></div><div class="hero"><h1>Layoff Pulse</h1><p>Why are companies reducing their workforce? Share your experience to help identify patterns behind layoffs—beyond headlines and assumptions.</p><span class="pill">⏱ 3–5 minutes · Anonymous by default</span></div></header>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><main class="wrap">
+<section class="card intro"><div class="icon">◎</div><div><h2>Your experience matters</h2><p>This survey is for people who have been laid off, are at risk, or have seen layoffs at their workplace. There are no right or wrong answers. Skip anything you are uncomfortable answering. Please do not include names, confidential company information, or personal identifiers.</p></div></section>
+<form id="survey">
+<section class="card"><div class="section-head"><h2>01 · Your work situation</h2><span class="num">3 questions</span></div>
+<div class="field"><label class="q">1. Which best describes your current situation? *</label><div class="options one">
+<label class="opt"><input required type="radio" name="situation" value="Laid off recently"><span>I've been laid off recently</span></label><label class="opt"><input type="radio" name="situation" value="Laid off earlier"><span>I was laid off earlier</span></label><label class="opt"><input type="radio" name="situation" value="At risk of layoff"><span>I'm worried my job may be affected</span></label><label class="opt"><input type="radio" name="situation" value="Witnessed layoffs"><span>Layoffs happened at my workplace, but I kept my job</span></label></div></div>
+<div class="field"><label class="q">2. Which industry do you work in? *</label><select required name="industry"><option value="">Select an industry</option><option>IT / Software / Technology</option><option>Consulting / IT Services</option><option>Banking / Finance / Insurance</option><option>Manufacturing / Automotive / EV</option><option>Retail / E-commerce</option><option>Media / Marketing / Design</option><option>Healthcare / Pharma</option><option>Education</option><option>Start-up / Other</option><option>Prefer not to say</option></select></div>
+<div class="field"><label class="q">3. How much professional experience do you have?</label><div class="options"><label class="opt"><input type="radio" name="experience" value="0–2 years"><span>0–2 years</span></label><label class="opt"><input type="radio" name="experience" value="3–5 years"><span>3–5 years</span></label><label class="opt"><input type="radio" name="experience" value="6–10 years"><span>6–10 years</span></label><label class="opt"><input type="radio" name="experience" value="10+ years"><span>10+ years</span></label></div></div></section>
+<section class="card"><div class="section-head"><h2>02 · What caused the layoff?</h2><span class="num">4 questions</span></div>
+<div class="field"><label class="q">4. What reason did your employer give? <span class="hint">Choose all that apply, if you know.</span></label><div class="options"><label class="opt"><input type="checkbox" name="statedReason" value="Cost cutting / budget"><span>Cost cutting / budget</span></label><label class="opt"><input type="checkbox" name="statedReason" value="Restructuring / role removed"><span>Restructuring / role removed</span></label><label class="opt"><input type="checkbox" name="statedReason" value="AI / automation"><span>AI / automation</span></label><label class="opt"><input type="checkbox" name="statedReason" value="Poor business / fewer clients"><span>Fewer clients / weak business</span></label><label class="opt"><input type="checkbox" name="statedReason" value="Performance"><span>Performance-related</span></label><label class="opt"><input type="checkbox" name="statedReason" value="Merger / acquisition"><span>Merger / acquisition</span></label><label class="opt"><input type="checkbox" name="statedReason" value="Offshoring / work moved"><span>Work moved / offshoring</span></label><label class="opt"><input type="checkbox" name="statedReason" value="No reason shared"><span>No clear reason shared</span></label></div></div>
+<div class="field"><label class="q">5. What do you believe was the main underlying reason? *</label><div class="options"><label class="opt"><input required type="radio" name="mainReason" value="Reducing costs"><span>Reducing operating costs</span></label><label class="opt"><input type="radio" name="mainReason" value="AI / automation"><span>AI and automation</span></label><label class="opt"><input type="radio" name="mainReason" value="Business slowdown"><span>Business slowdown / lost clients</span></label><label class="opt"><input type="radio" name="mainReason" value="Management decisions"><span>Management decisions / restructuring</span></label><label class="opt"><input type="radio" name="mainReason" value="Role or skills mismatch"><span>Role or skills mismatch</span></label><label class="opt"><input type="radio" name="mainReason" value="Unclear / other"><span>Unclear / another reason</span></label></div></div>
+<div class="field"><label class="q">6. Did AI tools or automation directly affect your role?</label><div class="options"><label class="opt"><input type="radio" name="aiImpact" value="Yes, directly"><span>Yes, directly</span></label><label class="opt"><input type="radio" name="aiImpact" value="Partly"><span>Partly</span></label><label class="opt"><input type="radio" name="aiImpact" value="No clear impact"><span>No clear impact</span></label><label class="opt"><input type="radio" name="aiImpact" value="Not sure"><span>Not sure</span></label></div></div>
+<div class="field"><label class="q">7. How much warning did employees receive?</label><div class="options"><label class="opt"><input type="radio" name="warning" value="No warning"><span>No warning</span></label><label class="opt"><input type="radio" name="warning" value="Less than 2 weeks"><span>Less than 2 weeks</span></label><label class="opt"><input type="radio" name="warning" value="2–8 weeks"><span>2–8 weeks</span></label><label class="opt"><input type="radio" name="warning" value="More than 2 months"><span>More than 2 months</span></label></div></div></section>
+<section class="card"><div class="section-head"><h2>03 · Workplace patterns</h2><span class="num">3 questions</span></div>
+<div class="field"><label class="q">8. Who seemed most affected? <span class="hint">Choose all that apply.</span></label><div class="options"><label class="opt"><input type="checkbox" name="affected" value="Freshers / junior staff"><span>Freshers / junior staff</span></label><label class="opt"><input type="checkbox" name="affected" value="Mid-level employees"><span>Mid-level employees</span></label><label class="opt"><input type="checkbox" name="affected" value="Senior employees"><span>Senior employees</span></label><label class="opt"><input type="checkbox" name="affected" value="Contractors"><span>Contractors / temporary staff</span></label><label class="opt"><input type="checkbox" name="affected" value="Specific teams"><span>Specific teams or projects</span></label><label class="opt"><input type="checkbox" name="affected" value="Across all levels"><span>People across all levels</span></label><label class="opt"><input type="checkbox" name="affected" value="Not sure"><span>Not sure</span></label></div></div>
+<div class="field"><label class="q">9. Before the layoffs, what signs did you notice? <span class="hint">Choose all that apply.</span></label><div class="options"><label class="opt"><input type="checkbox" name="signs" value="Hiring freeze"><span>Hiring freeze</span></label><label class="opt"><input type="checkbox" name="signs" value="Projects cancelled"><span>Projects cancelled / fewer clients</span></label><label class="opt"><input type="checkbox" name="signs" value="AI adoption"><span>Rapid AI adoption</span></label><label class="opt"><input type="checkbox" name="signs" value="Budget cuts"><span>Budget cuts / reduced spending</span></label><label class="opt"><input type="checkbox" name="signs" value="No warning signs"><span>No obvious warning signs</span></label><label class="opt"><input type="checkbox" name="signs" value="Other / unknown"><span>Other / unknown</span></label></div></div>
+<div class="field"><label class="q">10. Which country or region are you answering from?</label><select name="region"><option value="">Prefer not to say</option><option>India</option><option>North America</option><option>Europe / UK</option><option>Asia-Pacific (outside India)</option><option>Middle East / Africa</option><option>Latin America</option><option>Other / prefer not to say</option></select></div></section>
+<section class="card"><div class="section-head"><h2>04 · Impact and solutions</h2><span class="num">2 questions</span></div>
+<div class="field"><label class="q">11. What has been the biggest impact on you or your colleagues?</label><div class="options"><label class="opt"><input type="radio" name="impact" value="Financial pressure"><span>Financial pressure</span></label><label class="opt"><input type="radio" name="impact" value="Stress / uncertainty"><span>Stress and uncertainty</span></label><label class="opt"><input type="radio" name="impact" value="Career disruption"><span>Career disruption / skill change</span></label><label class="opt"><input type="radio" name="impact" value="Difficulty finding work"><span>Difficulty finding new work</span></label><label class="opt"><input type="radio" name="impact" value="Workload increased for remaining staff"><span>Workload increased for remaining staff</span></label><label class="opt"><input type="radio" name="impact" value="Other"><span>Other</span></label></div></div>
+<div class="field"><label class="q">12. In your view, what should companies do differently? <span class="hint">Optional. Please avoid names or confidential details.</span></label><textarea name="suggestion" maxlength="1200" placeholder="For example: communicate earlier, retrain staff, explain how AI affects roles…"></textarea></div>
+<div class="field"><label class="q">Anything else you want people to understand about layoffs? <span class="hint">Optional</span></label><textarea name="anythingElse" maxlength="1200" placeholder="Share your experience in your own words…"></textarea></div>
+<div class="actions"><button class="btn" type="submit">Submit survey</button><button class="btn secondary" type="reset">Clear answers</button></div><p class="privacy">Privacy note: responses are submitted anonymously to the survey database. Do not include names, employer identifiers, or confidential information. See the project README for data-handling and deployment details.</p></section>
+</form>
+<section class="card success-panel" id="successPanel" aria-live="polite"><div class="success-mark">✓</div><h2>Thank you for sharing your experience.</h2><p>Your anonymous survey response has been submitted successfully. Your input will help us understand reported layoff patterns.</p><a class="btn" href="/" style="display:inline-block;text-decoration:none">Back to survey</a></section>
+</main><div class="footer">Layoff Pulse · Community research concept · Avoid sharing identifying or confidential information.</div>
+
+<script>
+const form = document.getElementById('survey');
+const toast = document.getElementById('toast');
+const successPanel = document.getElementById('successPanel');
+const submitButton = form.querySelector('button[type="submit"]');
+
+function showToast(message, isError = false) {
+  toast.textContent = message;
+  toast.className = 'toast show' + (isError ? ' error' : '');
+  window.clearTimeout(showToast.timer);
+  showToast.timer = window.setTimeout(() => toast.className = 'toast', 5000);
+}
+function getValue(name) {
+  const els = [...form.querySelectorAll(`[name="${name}"]`)];
+  if (!els.length) return '';
+  if (els[0].type === 'checkbox') return els.filter(e => e.checked).map(e => e.value);
+  const checked = els.find(e => e.checked);
+  return checked ? checked.value : (els[0].tagName === 'SELECT' || els[0].tagName === 'TEXTAREA' ? els[0].value.trim() : '');
+}
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const names = ['situation','industry','experience','statedReason','mainReason','aiImpact','warning','affected','signs','region','impact','suggestion','anythingElse'];
+  const responses = {};
+  names.forEach(name => {
+    const value = getValue(name);
+    if (value !== '' && (!Array.isArray(value) || value.length)) responses[name] = value;
+  });
+
+  submitButton.disabled = true;
+  const previousText = submitButton.textContent;
+  submitButton.textContent = 'Submitting…';
+  try {
+    const response = await fetch('/api/survey', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({responses})
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || 'Unable to submit your response. Please try again.');
+    showToast('✓ Response submitted successfully!');
+    form.style.display = 'none';
+    successPanel.style.display = 'block';
+    successPanel.scrollIntoView({behavior: 'smooth', block: 'start'});
+    // A dedicated success page is also included. Redirect after the toast is visible.
+    window.setTimeout(() => { window.location.href = '/success.html'; }, 900);
+  } catch (error) {
+    showToast(error.message || 'Network error. Please check your connection and try again.', true);
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = previousText;
+  }
+});
+</script>
+</body></html>
